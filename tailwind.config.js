@@ -16,6 +16,7 @@ export default {
         'accent': '#0f3460',
         'highlight': '#e94560',
         'success': '#00d9a3',
+        'border': '#e5e7eb',
       },
       animation: {
         'slide-up': 'slideUp 0.4s ease-out',

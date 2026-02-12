@@ -6,17 +6,17 @@ import TaskCard from './TaskCard';
 const COLUMN_CONFIG = {
   todo: {
     title: 'To Do',
-    color: 'from-blue-500 to-blue-600',
+    color: 'bg-accent',
     icon: '📝',
   },
   inProgress: {
     title: 'In Progress',
-    color: 'from-yellow-500 to-orange-500',
+    color: 'bg-highlight',
     icon: '🚀',
   },
   done: {
     title: 'Done',
-    color: 'from-green-500 to-emerald-600',
+    color: 'bg-success',
     icon: '✓',
   },
 };
@@ -58,7 +58,7 @@ export default function Column({ columnId }) {
       className="flex flex-col h-full"
     >
       {/* Column Header */}
-      <div className={`bg-gradient-to-r ${config.color} rounded-t-2xl p-4 shadow-lg`}>
+      <div className={`${config.color} rounded-t-2xl p-4 shadow-lg`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <span className="text-2xl">{config.icon}</span>
@@ -77,8 +77,8 @@ export default function Column({ columnId }) {
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
-        className={`flex-1 bg-gray-50 rounded-b-2xl p-4 transition-all duration-200 min-h-[500px] ${
-          isDragOver ? 'bg-highlight/10 ring-2 ring-highlight ring-inset' : ''
+        className={`flex-1 bg-slate-700 rounded-b-2xl p-4 transition-all duration-200 min-h-[500px] ${
+          isDragOver ? 'bg-highlight/20 ring-2 ring-highlight ring-inset' : ''
         }`}
       >
         <div className="space-y-3">
@@ -92,7 +92,7 @@ export default function Column({ columnId }) {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="flex flex-col items-center justify-center h-40 text-gray-400"
+              className="flex flex-col items-center justify-center h-40 text-gray-500"
             >
               <svg
                 className="w-12 h-12 mb-2 opacity-50"

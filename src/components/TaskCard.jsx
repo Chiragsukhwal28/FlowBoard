@@ -50,7 +50,7 @@ export default function TaskCard({ task, index }) {
       layout
       draggable
       onDragStart={handleDragStart}
-      className="group bg-white rounded-xl p-4 shadow-sm hover:shadow-lg transition-all duration-200 cursor-move border border-gray-100 hover:border-highlight/30"
+      className="group bg-slate-800 rounded-xl p-4 shadow-sm hover:shadow-lg transition-all duration-200 cursor-move border border-slate-700 hover:border-highlight/30 hover:cursor-pointer"
     >
       <div className="flex items-start justify-between gap-3">
         {isEditing ? (
@@ -60,13 +60,13 @@ export default function TaskCard({ task, index }) {
             onChange={(e) => setEditTitle(e.target.value)}
             onBlur={handleSave}
             onKeyDown={handleKeyDown}
-            className="flex-1 text-sm text-gray-800 font-medium outline-none border-b-2 border-highlight focus:border-highlight font-sans"
+            className="flex-1 text-sm text-gray-200 bg-slate-700 font-medium outline-none border-b-2 border-highlight focus:border-highlight font-sans"
             autoFocus
           />
         ) : (
           <p
             onClick={handleEdit}
-            className="flex-1 text-sm text-gray-800 font-medium leading-relaxed cursor-text hover:text-highlight transition-colors font-sans"
+            className="flex-1 text-sm text-gray-200 font-medium leading-relaxed cursor-text hover:text-highlight transition-colors font-sans"
           >
             {task.title}
           </p>
@@ -77,7 +77,7 @@ export default function TaskCard({ task, index }) {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={handleEdit}
-            className="text-gray-400 hover:text-highlight transition-colors"
+            className="text-gray-500 hover:text-highlight transition-colors hover:cursor-pointer"
             title="Edit task"
           >
             <svg

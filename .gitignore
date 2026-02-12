@@ -29,3 +29,25 @@ dist-ssr
 .env.production.local
 .env.development.local
 .env.test.local
+# OS files
+.DS_Store
+Thumbs.db
+*.pdb
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Build outputs
+coverage
+.next
+out
+
+# Dependencies
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+*.md

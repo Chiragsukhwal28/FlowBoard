@@ -13,9 +13,9 @@ export default function BoardPage() {
   const completionRate = totalTasks > 0 ? Math.round((completedTasks / totalTasks) * 100) : 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b border-gray-200">
+      <header className="bg-slate-800 shadow-sm border-b border-slate-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <motion.div
@@ -23,7 +23,7 @@ export default function BoardPage() {
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center gap-4"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-highlight to-success rounded-xl rotate-12 flex items-center justify-center shadow-lg">
+              <div className="w-12 h-12 bg-highlight rounded-xl rotate-12 flex items-center justify-center shadow-lg">
                 <svg
                   className="w-6 h-6 text-white -rotate-12"
                   fill="none"
@@ -39,8 +39,8 @@ export default function BoardPage() {
                 </svg>
               </div>
               <div>
-                <h1 className="font-display text-2xl text-gray-900 italic">FlowBoard</h1>
-                <p className="text-sm text-gray-500 font-sans">Welcome back, {user?.username}</p>
+                <h1 className="font-display text-2xl text-gray-100 italic">FlowBoard</h1>
+                <p className="text-sm text-gray-400 font-sans">Welcome back, {user?.username}</p>
               </div>
             </motion.div>
 
@@ -50,20 +50,20 @@ export default function BoardPage() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="hidden sm:flex items-center gap-6 bg-gray-50 rounded-xl px-4 py-2 border border-gray-200"
+                className="hidden sm:flex items-center gap-6 bg-slate-700 rounded-xl px-4 py-2 border border-slate-600"
               >
                 <div className="text-center">
-                  <div className="text-xs text-gray-500 font-sans">Tasks</div>
-                  <div className="text-lg font-bold text-gray-900 font-sans">{totalTasks}</div>
+                  <div className="text-xs text-gray-400 font-sans">Tasks</div>
+                  <div className="text-lg font-bold text-gray-100 font-sans">{totalTasks}</div>
                 </div>
-                <div className="w-px h-8 bg-gray-300"></div>
+                <div className="w-px h-8 bg-slate-600"></div>
                 <div className="text-center">
-                  <div className="text-xs text-gray-500 font-sans">Done</div>
+                  <div className="text-xs text-gray-400 font-sans">Done</div>
                   <div className="text-lg font-bold text-success font-sans">{completedTasks}</div>
                 </div>
-                <div className="w-px h-8 bg-gray-300"></div>
+                <div className="w-px h-8 bg-slate-600"></div>
                 <div className="text-center">
-                  <div className="text-xs text-gray-500 font-sans">Progress</div>
+                  <div className="text-xs text-gray-400 font-sans">Progress</div>
                   <div className="text-lg font-bold text-highlight font-sans">{completionRate}%</div>
                 </div>
               </motion.div>
@@ -76,7 +76,7 @@ export default function BoardPage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={logout}
-                className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl transition-colors font-sans font-medium"
+                className="flex items-center gap-2 px-4 py-2 bg-slate-700 hover:bg-slate-600 text-gray-200 rounded-xl transition-colors font-sans font-medium"
               >
                 <svg
                   className="w-4 h-4"
@@ -122,34 +122,34 @@ export default function BoardPage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="mt-8 bg-white/50 backdrop-blur-sm rounded-xl p-6 border border-gray-200"
+          className="mt-8 bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700"
         >
-          <h3 className="font-display text-lg text-gray-900 mb-3 italic">How to use</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-gray-600 font-sans">
+          <h3 className="font-display text-lg text-gray-100 mb-3 italic">How to use</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-gray-400 font-sans">
             <div className="flex items-start gap-3">
-              <div className="w-8 h-8 bg-highlight/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="w-8 h-8 bg-highlight/20 rounded-lg flex items-center justify-center flex-shrink-0">
                 <span className="text-highlight font-bold">1</span>
               </div>
               <div>
-                <div className="font-semibold text-gray-900 mb-1">Add Tasks</div>
+                <div className="font-semibold text-gray-200 mb-1">Add Tasks</div>
                 <div>Click "Add New Task" to create items</div>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <div className="w-8 h-8 bg-highlight/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="w-8 h-8 bg-highlight/20 rounded-lg flex items-center justify-center flex-shrink-0">
                 <span className="text-highlight font-bold">2</span>
               </div>
               <div>
-                <div className="font-semibold text-gray-900 mb-1">Drag & Drop</div>
+                <div className="font-semibold text-gray-200 mb-1">Drag & Drop</div>
                 <div>Move tasks between columns</div>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <div className="w-8 h-8 bg-highlight/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="w-8 h-8 bg-highlight/20 rounded-lg flex items-center justify-center flex-shrink-0">
                 <span className="text-highlight font-bold">3</span>
               </div>
               <div>
-                <div className="font-semibold text-gray-900 mb-1">Edit & Delete</div>
+                <div className="font-semibold text-gray-200 mb-1">Edit & Delete</div>
                 <div>Hover over tasks to see options</div>
               </div>
             </div>

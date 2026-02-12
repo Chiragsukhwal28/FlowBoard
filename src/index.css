@@ -4,11 +4,11 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-gray-700;
   }
   
   body {
-    @apply bg-gray-50 text-gray-900 font-sans;
+    @apply bg-slate-900 text-gray-100 font-sans;
   }
 }
 
@@ -29,12 +29,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #475569;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #64748b;
 }
 
 /* Smooth transitions for all interactive elements */
@@ -47,7 +47,7 @@ textarea {
 
 /* Focus visible styles */
 :focus-visible {
-  @apply outline-none ring-2 ring-highlight ring-offset-2;
+  @apply outline-none ring-2 ring-highlight ring-offset-2 cursor-pointer;
 }
 
 /* Dragging cursor */
