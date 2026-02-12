@@ -62,7 +62,7 @@ export default function LandingPage() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="inline-block mb-6"
           >
-            <div className="w-20 h-20 bg-gradient-to-br from-highlight to-success rounded-2xl rotate-12 flex items-center justify-center mx-auto shadow-2xl">
+            <div className="w-20 h-20 bg-blue-500 rounded-2xl rotate-12 flex items-center justify-center mx-auto shadow-2xl">
               <svg
                 className="w-10 h-10 text-white -rotate-12"
                 fill="none"
@@ -139,7 +139,7 @@ export default function LandingPage() {
               type="submit"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full bg-gradient-to-r from-highlight to-success text-white font-semibold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 font-sans"
+              className="w-full bg-blue-500 text-white font-semibold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 font-sans"
             >
               Launch Board
             </motion.button>

@@ -23,7 +23,7 @@ export default function BoardPage() {
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center gap-4"
             >
-              <div className="w-12 h-12 bg-highlight rounded-xl rotate-12 flex items-center justify-center shadow-lg">
+              <div className="w-12 h-12 bg-blue-500 rounded-xl rotate-12 flex items-center justify-center shadow-lg">
                 <svg
                   className="w-6 h-6 text-white -rotate-12"
                   fill="none"
@@ -127,7 +127,7 @@ export default function BoardPage() {
           <h3 className="font-display text-lg text-gray-100 mb-3 italic">How to use</h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-gray-400 font-sans">
             <div className="flex items-start gap-3">
-              <div className="w-8 h-8 bg-highlight/20 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="w-8 h-8 bg-highlight rounded-lg flex items-center justify-center flex-shrink-0">
                 <span className="text-highlight font-bold">1</span>
               </div>
               <div>

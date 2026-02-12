@@ -50,4 +50,8 @@ out
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
+
+# Temporary markdown files
+*.md~
+tmp*.md
 *.md
